@@ -28,30 +28,26 @@ function addTask() {
     list.appendChild(newTask);
 
     //adicionar o evento de remover
-    const removeBtn = newTask
-      .querySelector(".remove-btn")
-      .addEventListener("click", function () {
-        removeTask(this);
-      });
+    const removeBtn = newTask.querySelector(".remove-btn");
+    removeBtn.addEventListener("click", function () {
+      removeTask(this);
+    });
     //adicionar evento de completar tarefa
-    const doneBtn = newTask
-      .querySelector(".done-btn")
-      .addEventListener("click", function () {
-        completeTask(this);
-        //trocando o botão do done pelo reverso
-        const reverseBtn = newTask.querySelector(".reverse-btn");
-        insertBtn(reverseBtn);
-      });
-    const reverseDoneTask = newTask
-      .querySelector(".reverse-btn")
-      .addEventListener("click", function () {
-        removeDoneTask(this);
-        const mapDoneBtn = newTask.querySelector(".done-btn");
-        insertBtn(mapDoneBtn);
-      });
+    const doneBtn = newTask.querySelector(".done-btn");
+    doneBtn.addEventListener("click", function () {
+      completeTask(this);
+      //trocando o botão do done pelo reverso
+      const reverseBtn = newTask.querySelector(".reverse-btn");
+      insertBtn(reverseBtn);
+    });
+    const reverseDoneTask = newTask.querySelector(".reverse-btn");
+    reverseDoneTask.addEventListener("click", function () {
+      removeDoneTask(this);
+      const mapDoneBtn = newTask.querySelector(".done-btn");
+      insertBtn(mapDoneBtn);
+    });
     //limpar texto
     document.querySelector("#task-title").value = "";
-
     document.cookie = textTask;
   }
 }

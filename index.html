@@ -15,15 +15,17 @@
     />
     <title>Portfólio - Humberto Freitas</title>
     <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="stylesheet" type="text/css" href="styleQuiz.css" />
     <script
       src="https://kit.fontawesome.com/10728e2d4f.js"
       crossorigin="anonymous"
     ></script>
     <script src="js/tarefas.js" defer></script>
     <script src="js/menuHamburguer.js" defer></script>
+    <script src="js/quiz.js" defer></script>
   </head>
   <body>
-    <header class="p-3 text-bg-dark o-header">
+    <header class="p-3 text-bg-dark o-header ">
       <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="#">
           <img
@@ -35,7 +37,7 @@
             class="d-inline-block align-top"
             alt="Nome Humberto Freitas"
           />
-          Humberto Freitas</a
+          <strong>Humberto Freitas</strong></a
         >
         <button
           class="navbar-toggler"
@@ -49,7 +51,7 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         <div
-          class="collapse navbar-collapse"
+          class="collapse navbar-collapse  animation "
           id="navbarNavAltMarkup"
           role="navigation"
         >
@@ -73,65 +75,14 @@
     <main class="o-main">
       <div class="container">
         <section id="inicio">
-          <h1>Apresentação do perfil - quem sou eu</h1>
+          <h1>Quem sou</h1>
           <p>
-            Lorem ipsum dolor sit amet. Qui corrupti officiis ut molestias
-            assumenda qui sunt dignissimos vel rerum consequatur 33 ducimus
-            consequatur qui dignissimos provident et autem ratione. Sed iure
-            blanditiis sed molestiae unde sed illo culpa in velit voluptate. Ut
-            odit unde ex odio provident et atque sequi.
+          Meu nome é Humberto Freitas, tenho 31 anos e sou casado a 5, sou natural de Parnamirim-RN e atualmente moro em Natal-RN.
+          Minha esposa se chama Larissa e temos 4 pets.
+
+
           </p>
-          <p>
-            Aut ipsa illum ad similique fugit sit perferendis dolor ut autem
-            autem sed illum sint. In magnam maxime et laboriosam voluptas quo
-            accusantium ducimus et dolorum deleniti qui dolorem adipisci et
-            consequatur accusamus. Eos odio quia in iure voluptatibus eum
-            dolores enim et quia sapiente quo facere rerum. Et nostrum
-            voluptatem qui nobis odit eum dolor distinctio vel voluptates
-            molestiae sit omnis galisum.
-          </p>
-          <p>
-            Ad voluptatem reiciendis et voluptatum molestiae aut tempore
-            voluptatem a dolores laboriosam. Est rerum fuga et voluptatem
-            corporis ab impedit fugit et quia incidunt ad laudantium ipsam.
-          </p>
-          <p>
-            Et ducimus provident ut sapiente molestiae non suscipit ipsam id
-            obcaecati itaque quo dolores molestias At necessitatibus voluptatem?
-            Id nobis architecto et error quia ab quae consectetur ut dolore
-            velit et galisum commodi.
-          </p>
-          <p>
-            Sed nisi sunt vel delectus dolore ex doloribus deserunt quo culpa
-            repudiandae et ratione modi sit iure labore. Aut libero quos non
-            praesentium voluptas non voluptatum quam eos consequatur architecto
-            qui quasi enim ut distinctio iusto. Quo quia atque ut rerum
-            veritatis sed porro provident sed asperiores quia et laboriosam
-            laboriosam et odio aliquam et voluptate voluptatibus!
-          </p>
-          <p>
-            Et fugiat voluptatem et rerum quaerat qui necessitatibus nostrum est
-            odit omnis in alias quia est rerum error? Rem facilis necessitatibus
-            sit neque explicabo est quibusdam nisi. Aut quidem accusantium a
-            asperiores nobis non sint minima sed laborum voluptas ut esse
-            incidunt ea distinctio iure.
-          </p>
-          <p>
-            Ut officia asperiores qui deserunt fugiat qui magni quia cum
-            pariatur maxime aut dolore cupiditate ut quia dolores et placeat
-            officiis? Et ipsam ipsum 33 laudantium voluptatem a distinctio
-            galisum aut nobis recusandae. Ut perspiciatis velit et
-            necessitatibus dolore hic harum reiciendis et consequuntur
-            praesentium. Ex accusamus aspernatur et voluptates voluptas At
-            repellat debitis.
-          </p>
-          <p>
-            Eum ipsum sunt est accusantium consequatur est blanditiis
-            exercitationem ut optio voluptas nam modi eius. Ut minus tenetur sit
-            soluta quis aut reprehenderit reiciendis qui quia nisi eum mollitia
-            fuga quo modi numquam non atque recusandae. Aut internos nesciunt
-            sed sunt eaque qui adipisci perferendis sit eligendi libero.
-          </p>
+
         </section>
         <section id="github">
           <h2>link para o github e resumo dos projetos com carrosel</h2>
@@ -233,6 +184,74 @@
                 </div>
               </div>
             </div>
+          </div>
+          <div id="telaQuiz">
+              <img id="imgQuiz" src="quizLogo.png" />
+
+              <div class="pergunta-1 divPerguntas" onclick="checarResposta(event)">
+                <h1 id="h1Quiz">Qual o resultado dessa equação: 4x + 8x = 36</h1>
+                <button id="btnQuiz">12</button>
+                <button id="btnQuiz">4</button>
+                <button id="btnQuiz" class="opcao-certa">3</button>
+                <button id="btnQuiz">2</button>
+              </div>
+              <div class="escondido pergunta-2 divPerguntas" onclick="checarResposta(event)">
+                <h1 id="h1Quiz">Quem descobriu a América?</h1>
+                <button  id="btnQuiz" class="opcao-certa">Cristóvão Colombo</button>
+                <button  id="btnQuiz">Pedro Álvares Cabral</button>
+                <button  id="btnQuiz">Duarte Pacheco Pereira</button>
+                <button  id="btnQuiz">Vasco da Gama</button>
+              </div>
+              <div class="escondido pergunta-3 divPerguntas" onclick="checarResposta(event)">
+                <h1 id="h1Quiz">Qual o maior país do mundo?</h1>
+                <button  id="btnQuiz">China</button>
+                <button  id="btnQuiz">Canadá</button>
+                <button  id="btnQuiz" class="opcao-certa">
+                  Rússia
+                </button>
+                <button  id="btnQuiz">Estados Unidos</button>
+              </div>
+              <div class="escondido pergunta-4 divPerguntas" onclick="checarResposta(event)">
+                <h1 id="h1Quiz">Qual a palavra está escrita corretamente?</h1>
+                <button  id="btnQuiz">secso</button>
+                <button  id="btnQuiz" class="opcao-certa">êxito</button>
+                <button  id="btnQuiz">enchame</button>
+                <button  id="btnQuiz">prossimo</button>
+              </div>
+              <div class="escondido pergunta-5 divPerguntas" onclick="checarResposta(event)">
+                <h1 id="h1Quiz">A estrutura de um átomo é formada pelo núcleo, que é constituído por duas partículas, quais são elas?</h1>
+                <button  id="btnQuiz" class="opcao-certa">Prótons e Nêutrons</button>
+                <button  id="btnQuiz">Prótons e Eletrosfera  </button>
+                <button  id="btnQuiz" >
+                    Prótons e Elétrons
+                </button>
+                <button  id="btnQuiz" >
+                    Elétrons e Nêutrons
+                </button>
+              </div>
+              <div id="resposta"class="resultado escondido divPerguntas">
+                <h1 id="h1Quiz">PARABÉNS!</h1>
+                <h1 id="h1Quiz">VOCÊ ACERTOU <span class="acertos"></span> DE 5 PERGUNTAS</h1>
+                <button id="btnQuiz"  onclick ="verGabarito()">Gabarito</button>
+                <button id="btnQuiz" onclick="voltarParaOInicio()">Voltar para o início</button>
+                <div id="gabarito" class="resultado escondido divPerguntas">
+                    <h1 id="h1Quiz">Gabarito!</h1>
+                    <h1 id="h1Quiz">Pergunta 1: Qual o resultado dessa equação: 4x + 8x = 36</h1>
+                    <h2>Resposta:  3</h2>
+                    <h1 id="h1Quiz">Pergunta 2: Quem descobriu a América?</h1>
+                    <h2>Resposta:  Cristóvão Colombo</h2>
+                    <h1 id="h1Quiz">Pergunta 3: Qual o maior país do mundo?</h1>
+                    <h2>Resposta:  Rússia</h2>
+                    <h1 id="h1Quiz">Pergunta 4: Qual a palavra está escrita corretamente?</h1>
+                    <h2>Resposta:  Êxito</h2>
+                    <h1 id="h1Quiz">Pergunta 5: A estrutura de um átomo é formada pelo núcleo, que é constituído por duas partículas, quais são elas?</h1>
+                    <h2>Resposta:  Prótons e Nêutrons</h2>
+               </div>
+              </div>
+          
+              <p>
+                <strong><span class="perguntaAtual">1</span>/5</strong>
+              </p>
           </div>
         </section>
         <section id="sobre">
